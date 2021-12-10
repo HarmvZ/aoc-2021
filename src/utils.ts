@@ -58,7 +58,7 @@ export const getAdjacentElements = (arr: any[], index: number): any[] => {
   return adjacent;
 };
 
-export const getIndices = (array: any[], element: any) => {
+export const getIndices = <T>(array: T[], element: T) => {
   const indices = [];
   let idx = array.indexOf(element);
   while (idx !== -1) {
@@ -66,4 +66,8 @@ export const getIndices = (array: any[], element: any) => {
     idx = array.indexOf(element, idx + 1);
   }
   return indices;
+};
+
+export const filterDistinct = <T>(array: T[]): T[] => {
+  return [...new Set(array)];
 };
