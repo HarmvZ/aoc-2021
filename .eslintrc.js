@@ -16,6 +16,6 @@ module.exports = {
   ],
   rules: {
     semi: ['error', 'always'],
-    'no-unused-vars': ['warn', { varsIgnorePattern: '^_+$' }]
+    'no-unused-vars': ['off', { varsIgnorePattern: '^_+$' }]
   }
 };
