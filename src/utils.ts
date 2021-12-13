@@ -71,3 +71,11 @@ export const getIndices = <T>(array: T[], element: T) => {
 export const filterDistinct = <T>(array: T[]): T[] => {
   return [...new Set(array)];
 };
+
+export const create2DArray = <T>(xSize: number, ySize: number, fillValue: T | null = null): T[][] => {
+  const graph: T[][] = new Array(ySize).fill([]);
+  for (const i in graph) {
+    graph[i] = new Array(xSize).fill(fillValue);
+  }
+  return graph;
+};
