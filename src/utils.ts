@@ -79,3 +79,11 @@ export const create2DArray = <T>(xSize: number, ySize: number, fillValue: T | nu
   }
   return graph;
 };
+
+export const create3DVolume = <T>(xSize: number, ySize: number, zSize: number, fillValue: T | null = null): T[][][] => {
+  const volume: T[][][] = new Array(zSize).fill([]);
+  for (const i in volume) {
+    volume[i] = create2DArray(xSize, ySize, fillValue);
+  }
+  return volume;
+};
