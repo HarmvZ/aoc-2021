@@ -30,9 +30,9 @@ export async function readInput (day: number, year: number = 2021) {
   const response = await axios.get(`https://adventofcode.com/${year}/day/${day.toString()}/input`, {
     withCredentials: true,
     headers: {
-      Cookie: `session=${getToken()}`
+      Cookie: `session=${getToken()}`,
     },
-    responseType: 'text'
+    responseType: 'text',
   });
   const inputData: string = response.data.trim();
   fs.writeFileSync(cachedPath, inputData);
