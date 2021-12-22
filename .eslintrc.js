@@ -1,21 +1,22 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
   },
   extends: [
-    'standard'
+    'standard',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 13,
-    sourceType: 'module'
+    sourceType: 'module',
   },
   plugins: [
-    '@typescript-eslint'
+    '@typescript-eslint',
   ],
   rules: {
     semi: ['error', 'always'],
-    'no-unused-vars': ['off', { varsIgnorePattern: '^_+$' }]
-  }
+    'no-unused-vars': ['off', { varsIgnorePattern: '^_+$' }],
+    'comma-dangle': ['error', 'always-multiline'],
+  },
 };
