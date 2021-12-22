@@ -15,7 +15,7 @@ readInput(20, 2021).then(input => {
     return [
       padChar.repeat(inImg[0].length + 2 * padLength),
       ...inImg.map(l => padChar.repeat(padLength) + l + padChar.repeat(padLength)),
-      padChar.repeat(inImg[0].length + 2 * padLength)
+      padChar.repeat(inImg[0].length + 2 * padLength),
     ];
   };
 
